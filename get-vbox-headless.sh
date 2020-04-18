@@ -37,3 +37,6 @@ VBoxHeadless --help
 
 # http://www.virtualbox.org/manual/ch07.html#vboxheadless
 
+cd /tmp
+wget http://download.virtualbox.org/virtualbox/4.1.18/Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
