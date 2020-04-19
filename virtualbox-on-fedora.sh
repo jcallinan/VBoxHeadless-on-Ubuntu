@@ -30,3 +30,21 @@ sudo yum install kernel-devel kernel-headers make patch gcc
 
 sudo wget https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo -P /etc/yum.repos.d
 sudo yum install VirtualBox-5.2
+
+
+# alternate from: https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/
+cd /etc/yum.repos.d/
+
+## Fedora 31/30/29/28 users
+wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+
+## CentOS 8.0/7.7 and Red Hat (RHEL) 8.0/7.7 users
+wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+#3. Update latest packages and check your kernel version
+# Update packages
+
+## Fedora 31/30/29/28 and CentOS/RHEL 8 ##
+dnf update
+
+## CentOS/RHEL 7 ##
+yum update
