@@ -23,3 +23,10 @@ sudo yum install virtualbox-3.1
 sudo yum install virtualbox-3.0
 
 
+# alternate from: https://linuxize.com/post/how-to-install-virtualbox-on-centos-7/
+
+sudo yum install kernel-devel kernel-headers make patch gcc
+
+
+sudo wget https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo -P /etc/yum.repos.d
+sudo yum install VirtualBox-5.2
