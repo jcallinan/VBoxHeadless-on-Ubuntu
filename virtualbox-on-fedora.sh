@@ -62,7 +62,21 @@ dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-hea
 
 ## CentOS/RHEL 7 ##
 yum install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+## Fedora 31/30/29/28/27 ##
+dnf install VirtualBox-6.1
 
+## CentOS/RHEL 8 ##
+dnf install VirtualBox-6.1
+
+## CentOS/RHEL 7 ##
+yum install VirtualBox-6.1
+
+## Fedora 31/30/29/28 and CentOS/RHEL 8/7 ##
+/usr/lib/virtualbox/vboxdrv.sh setup
+
+usermod -a -G vboxusers user_name
+
+VirtualBox
 
 # one more alternate: https://computingforgeeks.com/how-to-install-virtualbox-on-fedora-linux/
 
@@ -100,4 +114,6 @@ newgrp vboxusers
 
 # To launch it from the terminal, run:
 virtualbox
- 
+ # http://download.virtualbox.org/virtualbox/rpm/fedora/29/x86_64/VirtualBox-5.2-5.2.24_128163_fedora29-1.x86_64.rpm
+
+ # http://download.virtualbox.org/virtualbox/rpm/fedora/29/x86_64/
