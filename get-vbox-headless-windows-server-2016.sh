@@ -45,3 +45,7 @@ VBoxHeadless --help
 cd /tmp
 wget http://download.virtualbox.org/virtualbox/4.1.18/Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
+
+
+
+# PS Hyper-V local network - https://www.itechtics.com/share-files-between-guest-host-hyper-v/
