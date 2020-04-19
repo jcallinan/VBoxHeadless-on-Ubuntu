@@ -1,3 +1,14 @@
+# from: https://www.krizna.com/ubuntu/how-to-install-virtualbox-on-ubuntu-12-04/
+
+sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" >> /etc/apt/sources.list'
+
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get install virtualbox-4.2
+
+
 # from: https://www.howtoforge.com/vboxheadless-running-virtual-machines-with-virtualbox-4.1-on-a-headless-ubuntu-12.04-server
 
 sudo vi /etc/apt/sources.list
