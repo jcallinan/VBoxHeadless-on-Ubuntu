@@ -4,7 +4,12 @@ sudo vi /etc/apt/sources.list
 deb http://download.virtualbox.org/virtualbox/debian precise contrib
  wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.1 dkms
+sudo apt install linux-headers-generic
+
+sudo apt-get install linux-headers-$(uname -r) 
+sudo apt-get install build-essential 
+sudo apt-get install virtualbox
+sudo apt-get install dkms
 cd /tmp
 wget http://download.virtualbox.org/virtualbox/4.1.18/Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
