@@ -48,3 +48,56 @@ dnf update
 
 ## CentOS/RHEL 7 ##
 yum update
+
+## CentOS 8 and RHEL 8 ##
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+## CentOS 7 and RHEL 7 ##
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+## Fedora 31/30/29/28 ##
+dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms qt5-qtx11extras libxkbcommon
+
+## CentOS/RHEL 8 ##
+dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+
+## CentOS/RHEL 7 ##
+yum install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+
+
+# one more alternate: https://computingforgeeks.com/how-to-install-virtualbox-on-fedora-linux/
+
+
+# Let’s start by installing Development Tools required for building VirtualBox Linux kernel modules on Fedora.
+
+sudo dnf -y install @development-tools
+sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
+#Step 2: Add VirtualBox RPM repository
+# The latest VirtualBox packages are available on the RPM repository provided by VirtualBox development. Add it to your Fedora system using below command.
+
+cat <<EOF | sudo tee /etc/yum.repos.d/virtualbox.repo 
+[virtualbox]
+name=Fedora $releasever - $basearch - VirtualBox
+baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/29/\$basearch
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://www.virtualbox.org/download/oracle_vbox.asc
+EOF
+# Step 3: Import VirtualBox GPG Key
+# After adding the repository, import the GPG key used for signing packages.
+
+sudo dnf search virtualbox
+
+# Lastly, install VirtualBox 6 on Fedora 30/29/28.
+
+sudo dnf install VirtualBox-6.1
+# Step 5: Add your user to the vboxusers group
+# The vboxusers group is created automatically during installation. Add your user account to this group to operate VirtualBox without sudo.
+
+
+Sudo usermod -a -G vboxusers $USER
+newgrp vboxusers
+
+# To launch it from the terminal, run:
+virtualbox
+ 
