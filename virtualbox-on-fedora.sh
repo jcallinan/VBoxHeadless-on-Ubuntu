@@ -1,5 +1,5 @@
 # from: https://www.zealfortechnology.com/2012/06/install-oracle-virtualbox-on-fedora.html
-
+# using: https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/16/Live/x86_64/
 #First, you need to download the repository file from:
 #http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
 
