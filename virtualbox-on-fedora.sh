@@ -3,6 +3,8 @@
 #First, you need to download the repository file from:
 #http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
 
+# for Fedora 31, 
+# VirtualBox-6.1-6.1.6_137129_fedora31-1.x86_64.rpm
 
 #Then you need to move the file "virtualbox.repo" to the folder /etc/yum.repos.d/. In the terminal, navigate to the location where you kept the file and use the command:
 sudo mv virtualbox.repo /etc/yum.repos.d/
@@ -117,3 +119,7 @@ virtualbox
  # http://download.virtualbox.org/virtualbox/rpm/fedora/29/x86_64/VirtualBox-5.2-5.2.24_128163_fedora29-1.x86_64.rpm
 
  # http://download.virtualbox.org/virtualbox/rpm/fedora/29/x86_64/
+sudo -i
+ yum install flex
+  yum install bison
+/sbin/vboxconfig
